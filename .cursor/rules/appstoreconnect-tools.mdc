@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# App Store Connect Tools
+
+The main entry point for App Store Connect MCP tools is [src/index.ts](mdc:src/index.ts). This file defines and implements the following tools:
+
+- `list_apps`: List all apps in App Store Connect
+- `get_app_info`: Get detailed information about a specific app
+- `list_users`: List all users registered on your App Store Connect team
+- `list_customer_reviews`: List all customer reviews for an app
+- `list_customer_reviews_for_version`: List all customer reviews for a specific App Store Version
+- `create_customer_review_response`: Create a response or replace an existing response you wrote to a customer review ([Apple Docs](mdc:https:/developer.apple.com/documentation/appstoreconnectapi/post-v1-customerreviewresponses))
+- `delete_customer_review_response`: Delete a response to a customer review
+- `get_customer_review_response`: Get the response to a specific customer review
+- `list_beta_groups`: List all beta groups in App Store Connect
+
+Each tool is defined in the `tools` array and handled in the main server's request handler switch statement. The input schemas for each tool are specified inline in [src/index.ts](mdc:src/index.ts).
+
+Related types for API responses and requests are defined in [src/types.ts](mdc:src/types.ts), including types for apps, beta groups, testers, customer reviews, and customer review responses.

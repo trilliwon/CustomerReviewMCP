@@ -1,0 +1,43 @@
+{
+  "name": "@trilliwon/customer-review-mcp",
+  "version": "1.0.8",
+  "description": "A Model Context Protocol (MCP) server for interacting with the App Store Connect API.",
+  "keywords": [
+    "appstoreconnect",
+    "mcp"
+  ],
+  "homepage": "https://github.com/trilliwon/CustomerReviewMCP",
+  "bugs": {
+    "url": "https://github.com/trilliwon/CustomerReviewMCP/issues"
+  },
+  "license": "MIT",
+  "author": "TRILLIWON, Inc. https://trilliwon.com",
+  "type": "module",
+  "files": [
+    "dist/src"
+  ],
+  "bin": {
+    "mcp-server-customer-review": "dist/src/index.js"
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/src/*.js",
+    "prepare": "npm run build",
+    "start": "node dist/src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.4",
+    "axios": "^1.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "sharp": "^0.34.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.0.0",
+    "shx": "^0.4.0",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+}
